@@ -1,0 +1,9 @@
+{% extends "default/base.html.twig" %}
+{% block head %} {{ parent() }} {% endblock %}
+{% block buttons %} {{ parent() }} {% endblock %}
+
+{% block form %}
+{{ form_start(form) }}
+{{ form_widget(form) }}
+{{ form_end(form) }}
+{% endblock %}

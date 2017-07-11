@@ -1,0 +1,26 @@
+{% block head %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>{% block title %}Welcome!{% endblock %}</title>
+    {% block stylesheets %}{% endblock %}
+</head>
+{% endblock %}
+<body>
+{% block buttons %}
+    <a href="{{ path('homepage') }}">Home</a> |
+    <a href="{{ path('add_user') }}">Add new user</a> |
+    <a href="{{ path('add_time_date') }}">Add time and date to user</a>
+
+{% endblock  %}
+<br><br>
+{% block form %}  {% endblock %}
+<br>
+{% for message in app.flashes('notice') %}
+    <div class="flash-notice">
+        {{ message }}
+    </div>
+{% endfor %}
+</body>
+</html>
