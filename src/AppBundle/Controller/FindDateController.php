@@ -36,42 +36,57 @@ class FindDateController extends Controller
             $data = $form->get('date')->getData();
 
             $username = $form->get('name')->getData();
+
             // Wybiera wybranych w formularzu userów
         $userrrr = $username->toArray();
         $userCount = count($userrrr);
-        echo $userCount;
+
+        if ($userCount == 0)
+        {
+            echo "You have to select users!";
+            die();
+        }
         for ($i = 0; $i < $userCount; $i++)
         {
             $userrrr[$i] = $userrrr[$i]->getName();
         }
-        //$userrrr= $userrrr[1]->getName();
 
-        var_dump($userrrr);
             // Pobranie godzin zajętych w danej dacie
             $em = $this->getDoctrine()->getManager();
             $repo = $em->getRepository('AppBundle:DateAndTime');
 
-            $hours = $dateClass->CheckThisDate($repo, $data, $userrrr[0]);
+        // sprawdzenie godzin zajętych dla każdego wybranego usera
+            for ($i = 0; $i < $userCount; $i++)
+            {
+                $hours[$i] = $dateClass->CheckThisDate($repo, $data, $userrrr[$i]);
+            }
 
-            var_dump($hours);
-
-
-            // Pobranie konca pracy zrób service z parametrem do username? where = userName~
-            // przekazanie do service dayFind -> do arraya i tak array dla każdego usera
-            $repo2 = $em->getRepository('AppBundle:Users');
-            $maxhours = $dateClass->MaxHours($repo2);
-
-            echo "<br> <br> <br>";
+            // sprawdzenie godzin pracy wybranych userów
+            $repo = $em->getRepository('AppBundle:Users');
+            $maxhours = $dateClass->MaxHours($repo);
 
 
-         $result = $dateClass->dayFind($hours,$maxhours);
-               var_dump($result);
+        // Wybranie godzin wolnych dla kazdego usera
+            for ($i = 0; $i < $userCount; $i++)
+            {
+                $array[$i] = $dateClass->dayFind($hours[$i],$maxhours);
+            }
 
-//           Sprawdzenie wartości których niema ani w A ani w B
-//            function arrayDiff($A, $B) {
-//                $intersect = array_intersect($A, $B);
-//                return array_merge(array_diff($A, $intersect), array_diff($B, $intersect));
-//            }
+        // Połączenie tablic zmiennych + przefiltrowanie pod względem ilości zgadzających się wyników
+        $arraymerge = array_merge(...$array);
+            $counts = array_count_values($arraymerge);
+            $duplicates = array_filter($counts, function($element) { return ($element > 1); });
+
+        // Usuwa godziny które zgadzają się ale nie dla wszystkich wybranych userow
+     foreach ($duplicates as $key => $value)
+     {
+         if ($value < $userCount)
+         {
+             unset($duplicates[$key]);
+         }
+     }
+
+            return $this->render('default/results.html.twig', array( 'results' => $duplicates, 'day' => $data));
         }
 
         return $this->render('default/new.html.twig', array(

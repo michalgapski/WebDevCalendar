@@ -20,7 +20,7 @@ class AddTime extends AbstractType
             ->add('userName', EntityType::class, array('class' => 'AppBundle\Entity\Users'
             , 'choice_label' => 'name'))
             ->add('hour')
-            ->add('date', TextType::class, array('label' => 'Date: (days.month.year) ex. 31.04.17 '))
+            ->add('date', TextType::class, array('label' => 'Date: (days.month.year) ex. 30.04.17 '))
             ->add('save', SubmitType::class)
         ;
     }

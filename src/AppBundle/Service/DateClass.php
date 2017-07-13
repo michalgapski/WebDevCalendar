@@ -71,5 +71,15 @@ class DateClass
         } else
         return $hourResult;
     }
+    public function elementsReturn($element,$userCount)
+    {
+        return ($element == $userCount);
+    }
+    public function findFreeHours($arraymerge,$userCount)
+    {
+        $counts = array_count_values($arraymerge);
+        $duplicates = array_filter($counts, $this->elementsReturn($this,$userCount));
+        return $duplicates;
+    }
 
 }

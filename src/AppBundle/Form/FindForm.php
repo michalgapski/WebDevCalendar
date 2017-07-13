@@ -26,7 +26,7 @@ public function buildForm(FormBuilderInterface $builder, array $options)
     $builder
         ->add('name', EntityType::class, array('class' => 'AppBundle\Entity\Users'
         , 'choice_label' => 'name', 'expanded' => true, 'multiple' => true))
-        ->add('date', TextType::class, array('label' => 'Date: (days.month.year) ex. 31.04.17 '))
+        ->add('date', TextType::class, array('label' => 'Date: (days.month.year) ex. 30.04.17 '))
         ->add('save', SubmitType::class)
     ;
 }

@@ -1,0 +1,14 @@
+{% extends "default/base.html.twig" %}
+{% block head %} {{ parent() }} {% endblock %}
+{% block buttons %} {{ parent() }} {% endblock %}
+
+{% block results %}
+
+    <ul> Wolne godziny w dniu: {{ day }}
+{% for key in results|keys  %}
+  <li> {{  key }} </li>
+
+{% endfor %}
+    </ul>
+
+{% endblock %}

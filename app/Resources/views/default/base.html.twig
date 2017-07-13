@@ -11,11 +11,13 @@
 {% block buttons %}
     <a href="{{ path('homepage') }}">Home</a> |
     <a href="{{ path('add_user') }}">Add new user</a> |
-    <a href="{{ path('add_time_date') }}">Add time and date to user</a>
+    <a href="{{ path('add_time_date') }}">Add time and date to user</a> |
+    <a href="{{ path('findtime') }}">Find empty slot in calendar </a>
 
 {% endblock  %}
 <br><br>
 {% block form %}  {% endblock %}
+{% block results %} {% endblock %}
 <br>
 {% for message in app.flashes('notice') %}
     <div class="flash-notice">
