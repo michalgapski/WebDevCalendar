@@ -17,10 +17,16 @@ use Doctrine\Bundle\DoctrineBundle;
 
 class DateClass
 {
-    public function CheckThisDate($repo, $data,$username)
+    public function __construct(EntityManagerInterface $entityManager)
     {
-        $query = $repo->createQueryBuilder('h')
+        $this->em = $entityManager;
+    }
+
+    public function checkThisDate($data,$username)
+    {
+        $query = $this->em->createQueryBuilder()
             ->select("h.hour")
+            ->from('AppBundle:DateAndTime', 'h')
             ->where('h.date = :data')
             ->andWhere('h.userName = :name')
             ->setParameter('name', $username)
@@ -28,12 +34,20 @@ class DateClass
             ->getQuery();
 
        return $hours = $query->getResult();
-
     }
-    public function MaxHours($repo2)
+    public function freeHours($userCount,$hours,$maxhours)
     {
-        $query2 = $repo2->createQueryBuilder('wh')
+        for ($i = 0; $i < $userCount; $i++)
+        {
+            $array[$i] = $this->dayFind($hours[$i],$maxhours);
+        }
+        return $array;
+    }
+    public function maxHours()
+    {
+        $query2 = $this->em->createQueryBuilder()
             ->select('MAX(wh.workEnd)')
+            ->from('AppBundle:Users','wh')
             ->orderBy('wh.workEnd', 'DESC')
             ->getQuery();
 
@@ -45,7 +59,6 @@ class DateClass
 
     public function dayFind($hours,$maxhours)
     {
-
         $results = 0;
         $test = 0;
         for ($i = $maxhours; $i < 24; $i++) {
@@ -62,7 +75,6 @@ class DateClass
                 $results++;
                 $hourResult[] = $i;
             }
-
         }
 
         if ($results == 0)
@@ -71,15 +83,23 @@ class DateClass
         } else
         return $hourResult;
     }
-    public function elementsReturn($element,$userCount)
+
+    public function resultFreeHours($array,$userCount)
     {
-        return ($element == $userCount);
-    }
-    public function findFreeHours($arraymerge,$userCount)
-    {
+        // Połączenie tablic zmiennych + przefiltrowanie pod względem ilości zgadzających się wyników
+        $arraymerge = array_merge(...$array);
         $counts = array_count_values($arraymerge);
-        $duplicates = array_filter($counts, $this->elementsReturn($this,$userCount));
-        return $duplicates;
+        $result = array_filter($counts, function($element) { return ($element > 1); });
+
+        // Usuwa godziny które zgadzają się ale nie dla wszystkich wybranych userow
+        foreach ($result as $key => $value)
+        {
+            if ($value < $userCount)
+            {
+                unset($result[$key]);
+            }
+        }
+        return $result;
     }
 
 }

@@ -3,6 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="26429ae0-eb4a-4369-9751-21528baea6f7" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Controller/DefaultController.php" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/DefaultController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Controller/FindDateController.php" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/FindDateController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Service/DateClass.php" afterPath="$PROJECT_DIR$/src/AppBundle/Service/DateClass.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -30,22 +33,25 @@
       <file leaf-file-name="DateClass.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/AppBundle/Service/DateClass.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1292">
-              <caret line="82" column="5" lean-forward="false" selection-start-line="82" selection-start-column="5" selection-end-line="82" selection-end-column="5" />
-              <folding />
+            <state relative-caret-position="348">
+              <caret line="88" column="101" lean-forward="false" selection-start-line="88" selection-start-column="101" selection-end-line="88" selection-end-column="101" />
+              <folding>
+                <element signature="e#585#608#0#PHP" expanded="true" />
+                <element signature="e#1230#1247#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="153">
-                <caret line="9" column="41" lean-forward="false" selection-start-line="9" selection-start-column="41" selection-end-line="9" selection-end-column="41" />
-                <folding />
-              </first_editor>
-              <second_editor />
+      <file leaf-file-name="FindDateController.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/FindDateController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="178">
+              <caret line="63" column="70" lean-forward="false" selection-start-line="63" selection-start-column="70" selection-end-line="63" selection-end-column="70" />
+              <folding>
+                <element signature="e#41#65#0#PHP" expanded="true" />
+                <element signature="e#2446#2473#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -85,7 +91,12 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="306">
               <caret line="27" column="38" lean-forward="false" selection-start-line="27" selection-start-column="38" selection-end-line="27" selection-end-column="38" />
-              <folding />
+              <folding>
+                <element signature="e#6#89#0#PHP" expanded="false" />
+                <element signature="e#124#151#0#PHP" expanded="false" />
+                <element signature="e#1133#1143#1#PHP" expanded="false" />
+                <element signature="e#1186#1209#0#PHP" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -93,19 +104,25 @@
       <file leaf-file-name="AddDateAndTime.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/AddDateAndTime.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="612">
+            <state relative-caret-position="586">
               <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
-              <folding />
+              <folding>
+                <element signature="e#40#67#0#PHP" expanded="false" />
+                <element signature="e#1070#1080#1#PHP" expanded="false" />
+                <element signature="e#1123#1146#0#PHP" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DefaultController.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="DefaultController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/DefaultController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="238">
+              <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+              <folding>
+                <element signature="e#479#503#1#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -115,7 +132,9 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="374">
               <caret line="27" column="1" lean-forward="false" selection-start-line="27" selection-start-column="1" selection-end-line="27" selection-end-column="1" />
-              <folding />
+              <folding>
+                <element signature="e#36#92#0#PHP" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -125,7 +144,9 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="340">
               <caret line="22" column="1" lean-forward="false" selection-start-line="22" selection-start-column="1" selection-end-line="22" selection-end-column="1" />
-              <folding />
+              <folding>
+                <element signature="e#35#75#0#PHP" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -141,7 +162,6 @@
         <option value="$PROJECT_DIR$/src/AppBundle/People.php" />
         <option value="$PROJECT_DIR$/app/Resources/views/default/new.html.twig" />
         <option value="$PROJECT_DIR$/src/AppBundle/Controller/AddUserController.php" />
-        <option value="$PROJECT_DIR$/src/AppBundle/Controller/DefaultController.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Controller/AddDateAndTime.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Entity/DateAndTime.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Entity/Users.php" />
@@ -150,12 +170,13 @@
         <option value="$PROJECT_DIR$/src/AppBundle/Controller/Service/DateClass.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Form/FindForm.php" />
         <option value="$PROJECT_DIR$/app/Resources/views/default/results.html.twig" />
-        <option value="$PROJECT_DIR$/src/AppBundle/Service/DateClass.php" />
-        <option value="$PROJECT_DIR$/src/AppBundle/Controller/FindDateController.php" />
         <option value="$PROJECT_DIR$/app/Resources/views/default/base.html.twig" />
         <option value="$PROJECT_DIR$/src/AppBundle/Form/AddTime.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Form/AddUser.php" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Controller/DefaultController.php" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Service/DateClass.php" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Controller/FindDateController.php" />
       </list>
     </option>
   </component>
@@ -188,6 +209,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -385,7 +407,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -509,18 +530,19 @@
       <workItem from="1499883954763" duration="8362000" />
       <workItem from="1499969102892" duration="2360000" />
       <workItem from="1500124836337" duration="24000" />
-      <workItem from="1500226903851" duration="333000" />
+      <workItem from="1500226903851" duration="1177000" />
+      <workItem from="1500303411690" duration="4041000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="80260000" />
+    <option name="totallyTimeSpent" value="85145000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20682302" sideWeight="0.49445984" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20895523" sideWeight="0.49445984" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -585,7 +607,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#585#608#0#PHP" expanded="true" />
+            <element signature="e#1230#1247#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -806,25 +831,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/FindDateController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1224">
-          <caret line="87" column="0" lean-forward="false" selection-start-line="87" selection-start-column="0" selection-end-line="87" selection-end-column="0" />
-          <folding>
-            <element signature="e#41#65#0#PHP" expanded="true" />
-            <element signature="e#1466#1489#1#PHP" expanded="true" />
-            <element signature="e#1817#1834#1#PHP" expanded="true" />
-            <element signature="e#2666#2693#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/AppBundle/Form/FindForm.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
           <caret line="28" column="86" lean-forward="false" selection-start-line="28" selection-start-column="86" selection-end-line="28" selection-end-column="86" />
           <folding>
-            <element signature="e#120#160#0#PHP" expanded="true" />
+            <element signature="e#120#160#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -833,7 +845,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
           <caret line="27" column="1" lean-forward="false" selection-start-line="27" selection-start-column="1" selection-end-line="27" selection-end-column="1" />
-          <folding />
+          <folding>
+            <element signature="e#36#92#0#PHP" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -841,7 +855,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="22" column="1" lean-forward="false" selection-start-line="22" selection-start-column="1" selection-end-line="22" selection-end-column="1" />
-          <folding />
+          <folding>
+            <element signature="e#35#75#0#PHP" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -887,11 +903,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Service/DateClass.php">
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/AddDateAndTime.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1292">
-          <caret line="82" column="5" lean-forward="false" selection-start-line="82" selection-start-column="5" selection-end-line="82" selection-end-column="5" />
-          <folding />
+        <state relative-caret-position="586">
+          <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+          <folding>
+            <element signature="e#40#67#0#PHP" expanded="false" />
+            <element signature="e#1070#1080#1#PHP" expanded="false" />
+            <element signature="e#1123#1146#0#PHP" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -899,23 +919,44 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="27" column="38" lean-forward="false" selection-start-line="27" selection-start-column="38" selection-end-line="27" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/AddDateAndTime.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#6#89#0#PHP" expanded="false" />
+            <element signature="e#124#151#0#PHP" expanded="false" />
+            <element signature="e#1133#1143#1#PHP" expanded="false" />
+            <element signature="e#1186#1209#0#PHP" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/DefaultController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="238">
+          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding>
+            <element signature="e#479#503#1#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Service/DateClass.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="348">
+          <caret line="88" column="101" lean-forward="false" selection-start-line="88" selection-start-column="101" selection-end-line="88" selection-end-column="101" />
+          <folding>
+            <element signature="e#585#608#0#PHP" expanded="true" />
+            <element signature="e#1230#1247#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/FindDateController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="178">
+          <caret line="63" column="70" lean-forward="false" selection-start-line="63" selection-start-column="70" selection-end-line="63" selection-end-column="70" />
+          <folding>
+            <element signature="e#41#65#0#PHP" expanded="true" />
+            <element signature="e#2446#2473#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

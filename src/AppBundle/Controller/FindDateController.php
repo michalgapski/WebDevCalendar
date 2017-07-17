@@ -25,68 +25,47 @@ class FindDateController extends Controller
      */
     public function timeFinding(Request $request, DateClass $dateClass)
     {
-
         $form = $this->createForm(FindForm::class);
-
         $form->handleRequest($request);
 
-        if ($form->isSubmitted() && $form->isValid()) {
-
-            // Pobranie danych z form
+    if ($form->isSubmitted() && $form->isValid()) {
+        // Pobranie danych z form
             $data = $form->get('date')->getData();
-
             $username = $form->get('name')->getData();
 
-            // Wybiera wybranych w formularzu userów
-        $userrrr = $username->toArray();
-        $userCount = count($userrrr);
+        // Wybiera wybranych w formularzu userów
+        $user = $username->toArray();
+        $userCount = count($user);
 
         if ($userCount == 0)
         {
             echo "You have to select users!";
             die();
         }
+
+        // Stworzenie tablicy z nazwa uzytkownika
         for ($i = 0; $i < $userCount; $i++)
         {
-            $userrrr[$i] = $userrrr[$i]->getName();
+            $user[$i] = $user[$i]->getName();
         }
-
-            // Pobranie godzin zajętych w danej dacie
-            $em = $this->getDoctrine()->getManager();
-            $repo = $em->getRepository('AppBundle:DateAndTime');
 
         // sprawdzenie godzin zajętych dla każdego wybranego usera
             for ($i = 0; $i < $userCount; $i++)
             {
-                $hours[$i] = $dateClass->CheckThisDate($repo, $data, $userrrr[$i]);
+                $hours[$i] = $dateClass->checkThisDate($data, $user[$i]);
             }
-
-            // sprawdzenie godzin pracy wybranych userów
-            $repo = $em->getRepository('AppBundle:Users');
-            $maxhours = $dateClass->MaxHours($repo);
+        // sprawdzenie godzin pracy wybranych userów
+            $maxhours = $dateClass->maxHours();
 
 
         // Wybranie godzin wolnych dla kazdego usera
-            for ($i = 0; $i < $userCount; $i++)
-            {
-                $array[$i] = $dateClass->dayFind($hours[$i],$maxhours);
-            }
+            $array = $dateClass->freeHours($userCount,$hours,$maxhours);
 
-        // Połączenie tablic zmiennych + przefiltrowanie pod względem ilości zgadzających się wyników
-        $arraymerge = array_merge(...$array);
-            $counts = array_count_values($arraymerge);
-            $duplicates = array_filter($counts, function($element) { return ($element > 1); });
+        // Tworzy array z wolnymi godzinami dla wszystkich uzytkownikow
+            $result = $dateClass->resultFreeHours($array, $userCount);
 
-        // Usuwa godziny które zgadzają się ale nie dla wszystkich wybranych userow
-     foreach ($duplicates as $key => $value)
-     {
-         if ($value < $userCount)
-         {
-             unset($duplicates[$key]);
-         }
-     }
 
-            return $this->render('default/results.html.twig', array( 'results' => $duplicates, 'day' => $data));
+            return $this->render('default/results.html.twig', array( 'results' => $result, 'day' => $data));
         }
 
         return $this->render('default/new.html.twig', array(
